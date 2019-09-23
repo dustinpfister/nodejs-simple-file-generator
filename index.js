@@ -4,6 +4,7 @@ path = require('path'),
 writeFile = util.promisify(fs.writeFile),
 mkdirp = util.promisify(require('mkdirp'));
 
+// the genFile method
 let genFile = (filePath, data, options) => {
 
     // make path absolute
@@ -26,5 +27,13 @@ let genFile = (filePath, data, options) => {
 
 };
 
-// the genFile method
-module.exports =
+// the main method
+module.exports = (fileObjects, options) => {
+
+    if (Array.isArray(fileObjects)) {
+        return Promise.all(fileObjects.map((fileObj) => {
+                return genFile(fileObj.path, fileObj.data, options);
+            }));
+    }
+    return genFile(fileObjects.path, fileObjects.data, options)
+}
