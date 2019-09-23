@@ -23,19 +23,20 @@ let genFile = (filePath, data, options, forGen) => {
     .then(() => {
         return writeFile(filePath, data, options);
     })
+    // call forGen
     .then(() => {
-
         forGen(filePath, data)
-
     })
 };
 
 // the main method
 module.exports = (fileObjects, options, forGen) => {
+    // if Array call genFile for each fileObject
     if (Array.isArray(fileObjects)) {
         return Promise.all(fileObjects.map((fileObj) => {
                 return genFile(fileObj.path, fileObj.data, options, forGen);
             }));
     }
+    // else just call genFile once for the single FileObject
     return genFile(fileObjects.path, fileObjects.data, options, forGen)
 };
