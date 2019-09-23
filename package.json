@@ -1,0 +1,19 @@
+{
+  "name": "nodejs-simple-file-generator",
+  "version": "0.0.0",
+  "description": "The is a project that I made for just one blog post on my site here at github pages. The goal here was to make a very simple file generator that just accepts a path and data that is then used to write a file at the path. There is more to it then that but I do not want to make the project to complicated as this project is part of what might be a collection of projects aimed at just getting to the core of a problem and being done with it.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dustinpfister/nodejs-simple-file-generator.git"
+  },
+  "author": "Dustin Pfister",
+  "license": "GPL-3.0",
+  "bugs": {
+    "url": "https://github.com/dustinpfister/nodejs-simple-file-generator/issues"
+  },
+  "homepage": "https://github.com/dustinpfister/nodejs-simple-file-generator#readme"
+}
