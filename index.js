@@ -4,8 +4,7 @@ path = require('path'),
 writeFile = util.promisify(fs.writeFile),
 mkdirp = util.promisify(require('mkdirp'));
 
-// the genFile method
-module.exports = (filePath, data, options) => {
+let genFile = (filePath, data, options) => {
 
     // make path absolute
     filePath = path.resolve(filePath);
@@ -26,3 +25,6 @@ module.exports = (filePath, data, options) => {
     });
 
 };
+
+// the genFile method
+module.exports =

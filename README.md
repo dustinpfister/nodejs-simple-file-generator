@@ -4,11 +4,14 @@ The is a project that I made for just one blog post on my site here at github pa
 
 So the project just needs to
 
-* provide a method that accepts a path and data
-* creates the path if it is not there.
-* writes the given data at the given path
-* returns a promise and will not resolve in the event that certain errors happen in the process of this
+* create a genFile method that accepts a path and data
+* genFile creates the path if it is not there (mkdirp).
+* genFile writes the given data at the given path
+* genFile returns a promise and will not resolve in the event that certain errors happen in the process of creating a file
+* have the index.js of the project return a main method that will use this genFile method
+* the main method can be used to create a single file, or a collection of path data pairs
 
 That is it beyond that I just need to also
 
-* have a few simple use case examples
+* have a use case example that creates a single file
+* have a use case example that creates a collection of files
