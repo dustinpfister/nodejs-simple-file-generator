@@ -5,10 +5,10 @@ writeFile = util.promisify(fs.writeFile),
 mkdirp = util.promisify(require('mkdirp'));
 
 // the genFile method
-module.exports = (path, data, options) => {
+module.exports = (filePath, data, options) => {
 
     // make path absolute
-    path = path.resolve(path);
+    filePath = path.resolve(filePath);
 
     // using given options or these defaults
     options = options || {
@@ -17,12 +17,12 @@ module.exports = (path, data, options) => {
         flag: 'w'
     }
 
-    // mkdirp the path
-    return mkdirp(path)
+    // mkdirp the path to the file
+    return mkdirp(path.dirname(filePath))
 
     // then write the data to the file
     .then(() => {
-        writeFile(data, options);
+        return writeFile(filePath, data, options);
     });
 
 };
