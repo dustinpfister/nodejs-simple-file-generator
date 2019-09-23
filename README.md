@@ -8,8 +8,10 @@ So the project just needs to
 * genFile creates the path if it is not there (mkdirp).
 * genFile writes the given data at the given path
 * genFile returns a promise and will not resolve in the event that certain errors happen in the process of creating a file
+* genFile logs a message for each file gen
 * have the index.js of the project return a main method that will use this genFile method
 * the main method can be used to create a single file, or a collection of path data pairs
+
 
 That is it beyond that I just need to also
 

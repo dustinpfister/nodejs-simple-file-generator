@@ -23,7 +23,10 @@ let genFile = (filePath, data, options) => {
     // then write the data to the file
     .then(() => {
         return writeFile(filePath, data, options);
-    });
+    })
+    .then(() => {
+        console.log('\u001b[32m'+ 'genFile: ' + filePath + '\u001b[39m');
+    })
 
 };
 
