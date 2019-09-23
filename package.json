@@ -15,5 +15,8 @@
   "bugs": {
     "url": "https://github.com/dustinpfister/nodejs-simple-file-generator/issues"
   },
-  "homepage": "https://github.com/dustinpfister/nodejs-simple-file-generator#readme"
+  "homepage": "https://github.com/dustinpfister/nodejs-simple-file-generator#readme",
+  "dependencies": {
+    "mkdirp": "^0.5.1"
+  }
 }

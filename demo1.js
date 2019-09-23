@@ -1,0 +1,1 @@
+let genFile = require('./index.js')
